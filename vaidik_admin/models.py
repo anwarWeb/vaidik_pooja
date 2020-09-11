@@ -23,3 +23,24 @@ class Pandit(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=70, default="")
+    phone = models.CharField(max_length=70, default="")
+    message = models.CharField(max_length=500, default="")
+
+
+    def __str__(self):
+        return self.name
+
+class Order(models.Model):
+    name = models.CharField(max_length=30 ,default="")
+    email = models.CharField(max_length = 50, default="")
+    phone = models.CharField(max_length = 11 ,default="")
+    pooja_date = models.DateField(auto_now=False, auto_now_add=False, default="")
+    service = models.ForeignKey(Services, on_delete=models.CASCADE,default="")
+
+    def __str__(self):
+        return self.name
