@@ -1,1 +1,17 @@
-<h1>services page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1> This is services </h1>
+{% for services_list in services_list %}
+<h3>{{services_list.id}}</h3>
+<h3>{{services_list.name}}</h3>
+<h3>{{services_list.description}}</h3>
+<h3>{{services_list.price}}</h3>
+<img src='/media/{{services_list.image}}' class="card-img-top" alt="..." style='width:100px;'>
+<a href="/services_view/{{services_list.id}}"><button id="qv{{services_list.id}}" class="btn btn-primary cart">Quick View</button></a>
+{% endfor %}
+</body>
+</html>

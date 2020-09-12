@@ -40,7 +40,7 @@ class Order(models.Model):
     email = models.CharField(max_length = 50, default="")
     phone = models.CharField(max_length = 11 ,default="")
     pooja_date = models.DateField(auto_now=False, auto_now_add=False, default="")
-    service = models.ForeignKey(Services, on_delete=models.CASCADE,default="")
+    services = models.ForeignKey(Services, on_delete=models.CASCADE,default="")
 
     def __str__(self):
         return self.name
