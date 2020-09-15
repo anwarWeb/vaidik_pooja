@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Services, Pandit ,Contact , Order
+from .models import Services, Pandit ,Contact, Book
 # Register your models here.
 
 class ServicesAdmin(admin.ModelAdmin):
@@ -26,6 +26,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 admin.site.register(Contact, ContactAdmin)
 
-class OrderAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone','pooja_date','services')
-admin.site.register(Order, OrderAdmin)
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email','countryCode', 'phone','address','pooja_date','select_pooja')
+admin.site.register(Book, BookAdmin)

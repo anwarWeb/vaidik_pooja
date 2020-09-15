@@ -35,12 +35,25 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
-class Order(models.Model):
+# class Order(models.Model):
+#     name = models.CharField(max_length=30 ,default="")
+#     email = models.CharField(max_length = 50, default="")
+#     phone = models.CharField(max_length = 11 ,default="")
+#     pooja_date = models.DateField(auto_now=False, auto_now_add=False, default="")
+#     services = models.ForeignKey(Services, on_delete=models.CASCADE,default="")
+
+#     def __str__(self):
+#         return self.name
+
+
+class Book(models.Model):
     name = models.CharField(max_length=30 ,default="")
     email = models.CharField(max_length = 50, default="")
+    countryCode = models.CharField(max_length = 50, default="")
     phone = models.CharField(max_length = 11 ,default="")
+    address = models.CharField(max_length = 200 ,default="")
     pooja_date = models.DateField(auto_now=False, auto_now_add=False, default="")
-    services = models.ForeignKey(Services, on_delete=models.CASCADE,default="")
+    select_pooja = models.CharField(max_length = 200 ,default="")
 
     def __str__(self):
         return self.name

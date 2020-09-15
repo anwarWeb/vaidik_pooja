@@ -1,0 +1,739 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>vaidik</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css ' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css ' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins|Ubuntu&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        /* body {
+            background: #eee;
+            font-family: 'Ubuntu', sans-serif
+        } */
+
+        .box {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        .our-services {
+            margin-top: 125px;
+            padding-bottom: 30px;
+            padding: 0 60px;
+            min-height: 198px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: all .4s ease-in-out;
+            box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17)
+        }
+
+        .our-services .icon {
+            margin-bottom: -16px;
+            transform: translateY(-35%);
+            text-align: center;
+            justify-content: center;
+            margin-left: -5px;
+
+        }
+        .our-services h4{
+            font-weight: bold;
+            color: darkred;
+            font-size: 20px;
+        }
+        .our-services p{
+            color: black;
+        }
+
+        .our-services:hover h4,
+        .our-services:hover p {
+            color: #fff
+        }
+
+        .speedup:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #fb0054 0%, #f55b2a 100%)
+        }
+
+        .settings:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #34b5bf 0%, #210c59 100%)
+        }
+
+        .privacy:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #3615e7 0%, #44a2f6 100%)
+        }
+
+        .backups:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #fc6a0e 0%, #fdb642 100%)
+        }
+
+        .ssl:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #8d40fb 0%, #5a57fb 100%)
+        }
+
+        .database:hover {
+            box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+            cursor: pointer;
+            background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 100%)
+        }
+
+        /* .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #555;
+      } */
+    </style>
+</head>
+
+<body>
+
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <!-- <div class="custom-select-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+							<option>¥ JPY</option>
+							<option>$ USD</option>
+							<option>€ EUR</option>
+						</select>
+                    </div> -->
+                    <!-- <div class="right-phone-box">
+                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                    </div> -->
+                    {% comment %} <div class="our-link">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-phone-square"></i> 0755-4012502</a></li>
+                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        </ul>
+                    </div> {% endcomment %}
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container-fluid">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="/"
+                        style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item "><a class="nav-link" href="/">&nbsp;Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about-us">&nbsp;About us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/services">&nbsp;Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/team">&nbsp;Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact-us">&nbsp;Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/order">&nbsp;Book Online</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+
+                <!-- Start Atribute Navigation -->
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Main Top -->
+
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Our Services</h2>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">ABOUT US</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container-fluid mb-5">
+        <!-- <div class="text-center mt-5">
+            <h1>Our Services</h1>
+        </div> -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services settings">
+                        <div class="icon"> <img src="{% static 'images/221.png' %}"> </div>
+                        <h4>रुद्राभिषेक</h4>
+                        <p>भगवान शिव का रुद्राभिषेक करते समय महामृत्युंजय मंत्र, शिव तांडव स्तोत्र, ओम नम: शिवाय याफिर
+                            रुद्रामंत्र का जप करते रहें। अभिषेक के समय घर पर सभी लोग मौजूद रहें और ओम नम: शिवाय मंत्का
+                            जप करते रहें। अभिषेक से एकत्रित पानी को पूरे घर पर छिड़क दें और फिर पीने केलिए  दें। </p>
+                            <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services speedup">
+                        <div class="icon"> <img src="{% static 'images/222.png' %}"> </div>
+                        <h4>महामृत्युंजय मंत्र:</h4>
+                        <p>ॐ हौं जूं स: ॐ भूर्भुव: स्व: ओम त्रयम्बकम् यजामहे सुगन्धिं पुष्टिवर्धनम उर्वारुकमिव बन्धनान
+                            मृत्योर्मुक्षीय मामृतात् भूर्भुव: स्वरोम जूं स:। ध्यान देने वाली बात: जब भी आप इस मंत्र का
+                            जाप करें तो शुद्धता का विशेष रूप से ध्यान रखें। अत: मंत्र का उच्चारण एक दम सही होना चाहिए।
+                        </p>
+                        <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services privacy">
+                        <div class="icon"> <img src="{% static 'images/210.png' %}"> </div>
+                        <h4>शतचण्डी पाठ</h4>
+                        <p>यदि आप चण्‍डीपाठ यानी दुर्गा सप्‍तशती का पाठ करने करने जा रहे हैं, तो कुछ सावधानियां बरतना
+                            आपके लिए बहुत ही जरूरी है अन्‍यथा अच्‍छे के स्‍थान पर बुरे परिणाम भी भोगने पड़ सकते हैं,जो
+                            कि चण्‍डी पाठ करने वाले प्रत्‍येक व्‍यक्ति का अनुभव है। &nbsp;&nbsp;
+                            <br>
+                            <br>
+                            <br></p>
+                            <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services speedup">
+                        <div class="icon"> <img src="{% static 'images/213.png' %}"> </div>
+                        <h4>दुर्गा पाठ</h4>
+                        <p>नवरात्रि के नौ दिनों विधि विधान से मां दुर्गा की उपासना की जाती है। इसी के साथ दुर्गसप्तशती
+                            के पाठ करने का भी विधान है। दुर्गा सप्तशती में कुल 13 अध्याय हैं जिसमें मां अम्बे की महिमा
+                            बताई गई है। माना जाता है कि इसका विधि विधान से पाठ करने से शुभ फल की प्राप्ति होती है।.
+                            <br>
+                            <br></p>
+                           <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/212.png' %}"> </div>
+                        <h4>महालक्ष्मी पूजा</h4>
+                        <p>पूजा मुहूर्त में महालक्ष्मी की प्रतिमा की स्थापना करें और उनकी अक्षत, दूर्वा, लाल सूत,
+                            सुपारी, नारियल, फल, मिठाई, चन्दन, पत्र, माला, सफ़ेद कमल या कोई भी कमल का फूल और कमलगट्टा
+                            अर्पित कर पूजा करें। फिर लक्ष्मी जी को सफेद बर्फी या किशमिश का भोग लगाएं। महालक्ष्मी की
+                            कथा सुनें। 
+                            <br>
+                            <br></p>
+                             <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services ssl">
+                        <div class="icon"> <img src="{% static 'images/212.png' %}"> </div>
+                        <h4>सत्यनारायण पूजा</h4>
+                        <p>सत्यनारायण भगवान की कथा लोक में प्रचलित है। हिंदू धर्मावलंबियो के बीच सबसे प्रतिष्ठित व्रत
+                            कथा के रूप में भगवान विष्णु के सत्य स्वरूप की सत्यनारायण व्रत कथा है। सत्य को नारायण
+                            विष्णु के रूप में पूजना ही सत्यनारायण की पूजा है। कि संसार में एकमात्र नारायण ही सत्य हैं,</p>
+                             <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services database">
+                        <div class="icon"> <img src="{% static 'images/212.png' %}"> </div>
+                        <h4>पीतांबरा</h4>
+                        <p>उसे सबसे पहले गंगाजल से पवित्र कर लें। इसके बाद आचमन कर हाथ धोएं, आसन पवित्र करें। माता
+                            बगलामुखी व्रत का संकल्प हाथ में पीले चावल, हरिद्रा, पीले फूल व दक्षिणा लेकर करें। माता की
+                            पूजा : धूप, दीप, अगरबत्ती, पीले फल, पीले फूल, पीले लड्डू का प्रसाद चढ़ा कर करना चाहिए।
+                            <br>
+                            <br></p>
+                            <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/212.png' %}"> </div>
+                        <h4>वास्तु प्राप्ति</h4>
+                        <p>वास्तु प्राप्ति के लिए अनुष्ठान, भूमि पूजन, नींव खनन, कुआं खनन, शिलान्यास, द्वार स्थापन गृह
+                            प्रवेश आदि अवसरों पर वास्तु देव पूजा का विधान है। घर के किसी भी भाग को तोड़ कर दोबाराबनाने
+                            से वास्तु भंग दोष लग जाता है। इसकी शांति के लिए वास्तु देव पूजन किया जाता है। 
+                            <br>
+                            <br>
+                            <br></p>
+                           <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/211.png' %}"> </div>
+                        <h4>गणेश पूजा</h4>
+                        <p>गणेश भगवान की प्रतिमा की स्‍थापना के बाद गणेश जी को सिंदूर लगाएं। गणपति की मूर्ति के पास तांबे या चांदी के कलश में जल भरकर रख लें। उस कलश को गणपति के दांई ओर रखें और उन्हें चांदी का वर्क लगाएं। इसके उपरान्त उन्हें जनेऊ, लाल पुष्‍प, दूब, मोदक, नारियल आदि सामग्री अर्पित करें। </p>
+                     <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services ssl">
+                        <div class="icon"> <img src="{% static 'images/214.png' %}"> </div>
+                        <h4>परशुराम जयंती</h4>
+                        <p>ब्राह्म्ण जाति के कुल गुरु भगवान परशुराम की जयंती हिन्दू पंचांग के वैशाख माह की शुक्ल पक्ष तृतीया को मनाई जाती है। इसे “परशुराम द्वादशी” भी कहा जाता है। अक्षय तृतीया को परशुराम जयंती के रूप में भी मनाया जाता है। ... इसे “परशुराम द्वादशी” भी कहा जाता है।
+                        <br>
+                        <br>
+                        <br></p>
+                     <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services database">
+                        <div class="icon"> <img src="{% static 'images/212.png' %}"> </div>
+                        <h4> सरस्वती पूजा</h4>
+                        <p>या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना॥ या ब्रह्माच्युत शंकरप्रभृतिभिर्देवैः सदा वन्दिता। सा माम् पातु सरस्वती भगवती निःशेषजाड्यापहा॥ शुक्लाम् ब्रह्मविचार सार परमाम् आद्यां जगद्व्यापिनीम्।
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br></p>
+                           <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/215.png' %}"> </div>
+                        <h4>गीता</h4>
+                        <p>महाभारत के अनुसार कुरुक्षेत्र युद्ध में भगवान श्री कृष्ण ने गीता का सन्देश अर्जुन को सुनाया था। ... यह महाभारत के भीष्मपर्व के अन्तर्गत दिया गया एक उपनिषद् है। भगवत गीता में एकेश्वरवाद, कर्म योग, ज्ञानयोग, भक्ति योग की बहुत सुन्दर ढंग से चर्चा हुई है। 
+                        <br>
+                        <br>
+                        <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/216.png' %}"> </div>
+                        <h4>पार्वती पूजा</h4>
+                        <p>पूजा में माता को सुहाग की सारी पूजा सामग्रियों को चढ़ाएं और विधिवत भगवान शिव और माता पार्वती की पूजा अर्चना करें। पूजा करने के बाद माता पार्वती की आरती करें। व्रत रखने के दौरान पूरे दिन में सिर्फ एक बाद सात्विक भोजन ग्रहण करें। 
+                        <br>
+                        <br>
+                        <br></p>
+                            <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services ssl">
+                        <div class="icon"> <img src="{% static 'images/216.png' %}"> </div>
+                        <h4>ज्योतिष पूजा</h4>
+                        <p>ज्योतिष,जिसे लोकप्रिय भारतीय संस्कृति में ज्योतिष के रूप में जाना जाता है, ग्रीक शब्द, ज्योतिष, यानी सितारों के बारे में ज्ञान से प्राप्त होता है। सीधे शब्दों में कहें, यह ब्रह्मांड में सितारों, ग्रहों और अन्य दिव्य निकायों का अध्ययन है और यह कैसे एक व्यक्ति के जीवन को प्रभावित कर सकता है।</p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services database">
+                        <div class="icon"> <img src="{% static 'images/217.png' %}"> </div>
+                        <h4>दैनिक पूजा</h4>
+                        <p>दैनिक पूजा विधि हिन्दू धर्म की कई उपासना पद्धतियों में से एक है। ये एक दैनिक कर्म है। विभिन्न देवताओं को प्रसन्न करने के लिये कई मन्त्र बताये गये हैं, जो लगभग सभी पुराणों से हैं। वैदिक मन्त्र यज्ञ और हवन के लिये होते हैं।
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br></p>
+                   <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                   </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/217.png' %}"> </div>
+                        <h4>नवग्रह पूजन </h4>
+                        <p>फिर अपने बाएं हाथ में अक्षत लेकर मंत्रोच्चारण करते हुए दाएं हाथ से अक्षत अर्पित करते हुए ग्रहों का आह्वान किया जाता है। इस प्रकार सभी ग्रहों का आह्वान करके उनकी स्थापना की जाती है। इसके उपरांत हाथ में अक्षत लेकर मंत्र उच्चारित करते हुए नवग्रह मंडल में प्रतिष्ठा के लिये अर्पित करें। </p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/218.png' %}"> </div>
+                        <h4>पितृ दोष</h4>
+                        <p>नवम पर जब सूर्य और राहू की युति हो रही हो तो यह माना जाता है कि पितृ दोष योग बन रहा है। शास्त्र के अनुसार सूर्य तथा राहू जिस भी भाव में बैठते है, उस भाव के सभी फल नष्ट हो जाते है। व्यक्ति की कुण्डली में एक ऎसा दोष है जो इन सब दु:खों को एक साथ देने की क्षमता रखता है, इस दोष को पितृ दोष के नाम से जाना जाता है। </p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services ssl">
+                        <div class="icon"> <img src="{% static 'images/219.png' %}"> </div>
+                        <h4>काल सर्प दोष पूजा</h4>
+                        <p>काल सर्प दोष निवारण के लिए यह पूजा की जाती है। माना जाता है कि इस पूजा के बाद विवाह से लेकर संतान प्राप्ति तक के फल प्राप्त होते हैं। आमतौर पर शादी से पहले कुंडली देखी जाती है और काल सर्प दोष होने पर इसके निवारण के लिए त्रयंबकेश्वर के साथ ही उज्जैन में पूजा करवाई जाती है।</p>
+                            <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services database">
+                        <div class="icon"> <img src="{% static 'images/220.png' %}"> </div>
+                        <h4>मंगल दोष</h4>
+                        <p>मांगलिक दोष वाले जातक को हनुमान चालीसा का पाठ करना चाहिए। मंगली लड़की को गणेश जी और मंगल यंत्र की पूजा करनी चाहिए। मांगलिक को मंगलवार को व्रत करना चाहिए, हनुमान मंदिर जाकर प्रसाद चढ़ाने से दोष प्रभाव कम होता है।
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/220.png' %}"> </div>
+                        <h4>वास्तु प्राप्ति</h4>
+                        <p>वास्तु प्राप्ति के लिए अनुष्ठान, भूमि पूजन, नींव खनन, कुआं खनन, शिलान्यास, द्वार स्थापन गृह
+                            प्रवेश आदि अवसरों पर वास्तु देव पूजा का विधान है। घर के किसी भी भाग को तोड़ कर दोबारा बनाने
+                            से वास्तु भंग दोष लग जाता है। इसकी शांति के लिए वास्तु देव पूजन किया जाता है। 
+                            <br>
+                            <br>
+                            <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/210.png' %}"> </div>
+                        <h4>महालक्ष्मी पूजा</h4>
+                        <p>पूजा मुहूर्त में महालक्ष्मी की प्रतिमा की स्थापना करें और उनकी अक्षत, दूर्वा, लाल सूत,
+                            सुपारी, नारियल, फल, मिठाई, चन्दन, पत्र, माला, सफ़ेद कमल या कोई भी कमल का फूल और कमलगट्टा
+                            अर्पित कर पूजा करें। फिर लक्ष्मी जी को सफेद बर्फी या किशमिश का भोग लगाएं। महालक्ष्मी व्रत की
+                            कथा सुनें। 
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services ssl">
+                        <div class="icon"> <img src="{% static 'images/210.png' %}"> </div>
+                        <h4>सत्यनारायण पूजा</h4>
+                        <p>सत्यनारायण भगवान की कथा लोक में प्रचलित है। हिंदू धर्मावलंबियो के बीच सबसे प्रतिष्ठित व्रत
+                            कथा के रूप में भगवान विष्णु के सत्य स्वरूप की सत्यनारायण व्रत कथा है। ... सत्य को नारायण
+                            (विष्णु के रूप में पूजना ही सत्यनारायण की पूजा है। इसका दूसरा अर्थ यह है कि संसार में
+                            एकमात्र नारायण ही सत्य हैं, बाकी सब माया है।</p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services database">
+                        <div class="icon"> <img src="{% static 'images/210.png' %}"> </div>
+                        <h4>पीतांबरा</h4>
+                        <p>उसे सबसे पहले गंगाजल से पवित्र कर लें। इसके बाद आचमन कर हाथ धोएं, आसन पवित्र करें। माता
+                            बगलामुखी व्रत का संकल्प हाथ में पीले चावल, हरिद्रा, पीले फूल व दक्षिणा लेकर करें। माता की
+                            पूजा : धूप, दीप, अगरबत्ती, पीले फल, पीले फूल, पीले लड्डू का प्रसाद चढ़ा कर करना चाहिए।
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="our-services backups">
+                        <div class="icon"> <img src="{% static 'images/210.png' %}"> </div>
+                        <h4>गौरी-शंकर पूजा</h4>
+                        <p>हरतालिका व्रत को हरतालिका तीज या तीजा भी कहते हैं। यह व्रत भाद्रपद मास के शुक्ल पक्ष की तृतीया को हस्त नक्षत्र के दिन होता है। इस दिन कुमारी और सौभाग्यवती स्त्रियाँ गौरी-शंकर की पूजा करती हैं। ... इस दिन व्रत करने वाली स्त्रियां सूर्योदय से पूर्व ही उठ जाती हैं और नहा धोकर पूरा श्रृंगार करती हैं। 
+                        <br>
+                        <br>
+                        <br></p>
+                    <hr>
+                            <a href="/order" class="btn" style="margin: 5px; padding: 5px; color: darkred;
+                            cursor: pointer; border-radius: 15px;">Book Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <footer>
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Business Time</h3>
+                                <ul class="list-time">
+                                    <li>Monday - Friday: 08.00am to 05.00pm</li>
+                                    <li>Saturday: 10.00am to 08.00pm</li>
+                                    <li>Sunday: <span>Closed</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Newsletter</h3>
+                                <form class="newsletter-box">
+                                    <div class="form-group">
+                                        <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <button class="btn hvr-hover" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Social Media</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-widget">
+                                <h4>About Freshshop</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-link">
+                                <h4>Information</h4>
+                                <ul>
+                                <li><a href="/about-us">About Us</a></li>
+                                <li><a href="/services">Service</a></li>
+                                <li><a href="/team">Our Teams</a></li>
+                                <li><a href="/contact-us">Contact Us</a></li>
+                                <li><a href="/order">Book Now</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-link-contact">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                    <li>
+                                        <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756
+                                            <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888
+                                                705 770</a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope"></i>Email: <a
+                                                href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer  -->
+
+        <!-- Start copyright  -->
+        <div class="footer-copyright">
+            <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
+                <a href="https://html.design/">Bytezip Technologies</a></p>
+        </div>
+        <!-- End copyright  -->
+
+        <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+        <!-- ALL JS FILES -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'js/inewsticker.js' %}"></script>
+    <script src="{% static 'js/bootsnav.js' %}"></script>
+    <script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

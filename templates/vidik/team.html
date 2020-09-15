@@ -1,0 +1,442 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>vaidik</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css ' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css ' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    a{
+        text-decoration: none;
+        color: black;
+        
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    
+    
+    .center-div{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+     
+    
+    h1{
+      font-size: 50px;
+    }
+    video {
+      
+      width: 100%;
+      height: 290px;
+    }
+    
+    
+    
+    
+    /* .about-section {
+        padding: 90px;
+        text-align: center;
+        background-image:url("images/g21.jpg");
+        background-position:fixed;
+        background-size: cover;
+        color: white;
+        
+      } */
+    
+      
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white !important;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      button:hover {
+        background-color: gray;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+    
+    .col-lg-7 button {
+       width: 150px;
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white !important;
+      background-color:rgb(113, 113, 236);
+      text-align: center;
+      cursor: pointer;
+    }
+    .col-lg-7 button:hover{
+      background-color: skyblue;
+    }
+    .col-lg-5 img{
+      
+        box-shadow:0 0 20px #504848
+    }
+     
+</style>
+
+</head>
+
+<body>
+    
+    <div class="main-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					
+                    {% comment %} <div class="our-link">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-phone-square"></i> 0755-4012502</a></li>
+                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
+                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        </ul>
+                    </div> {% endcomment %}
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    <header class="main-header">
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+            <div class="container-fluid">
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    <a class="navbar-brand" href="/" style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                 <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item "><a class="nav-link" href="/">&nbsp;Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about-us">&nbsp;About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/services">&nbsp;Services</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/team">&nbsp;Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact-us">&nbsp;Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/order">&nbsp;Book Online</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- Start Atribute Navigation -->
+                <!-- End Atribute Navigation -->
+            </div>
+            <!-- Start Side Menu -->
+           
+            <!-- End Side Menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Our Team</h2>
+                    <!-- <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active"> Contact Us </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <br>
+     <center>
+      <video controls autoplay style="width:50%; height:350px;">
+        <source src="{% static 'vedio/pooja_vedio.mp4'%}" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+      </video>
+         </center>
+          
+            <div class="py-5 container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="{% static 'images/pt_img/shivnarayan.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
+                </div>
+                <div class="col-lg-7">
+                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem;">Pt. Shivnarayan Awasthi</h3>
+                  <p class="font-weight-bold"> पण्डित (पंडित) का अर्थ है विद्वान या अध्यापक से है, विशेषकर वह जो संस्कृत और हिन्दू विधि, धर्म, संगीत या दर्शनशास्त्र में दक्ष हो। अपने मूल अर्थ में 'पण्डित' शब्द का तात्पर्य हमेशा उस हिन्दू से लिया जाता है जिसने वेदों का कोई एक मुख्य भाग उसके उच्चारण और गायन के लय व ताल सहित कण्ठस्थ कर लिया हो।
+                    .</p>
+                  <p class="font-weight-bold"> div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur iure dolore dolorum eum ex, expedita voluptate est adipisci repudiandae. Minus tenetur ut veritatis non hic beatae velit? Eius, totam, officia?</p>
+                  <p class="font-weight-bold">Enim numquam autem, suscipit repellat vero, voluptas adipisci provident ad quidem dolorum minus, architecto. Nostrum deleniti nesciunt consequatur tempora repudiandae quos quas, animi perspiciatis nam consectetur earum adipisci, repellendus laudantium.</p>
+                  <button> <a href="/order">Book Now</a></button>
+                </div>
+              </div>
+            </div>
+              
+      
+            <div class="py-5 container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem;">Pt. Shekhar Tiwari</h3>
+                  <p class="font-weight-bold"> पण्डित (पंडित) का अर्थ है विद्वान या अध्यापक से है, विशेषकर वह जो संस्कृत और हिन्दू विधि, धर्म, संगीत या दर्शनशास्त्र में दक्ष हो। अपने मूल अर्थ में 'पण्डित' शब्द का तात्पर्य हमेशा उस हिन्दू से लिया जाता है जिसने वेदों का कोई एक मुख्य भाग उसके उच्चारण और गायन के लय व ताल सहित कण्ठस्थ कर लिया हो।
+                    .</p>
+                  <p class="font-weight-bold"> div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur iure dolore dolorum eum ex, expedita voluptate est adipisci repudiandae. Minus tenetur ut veritatis non hic beatae velit? Eius, totam, officia?</p>
+                  <p class="font-weight-bold">Enim numquam autem, suscipit repellat vero, voluptas adipisci provident ad quidem dolorum minus, architecto. Nostrum deleniti nesciunt consequatur tempora repudiandae quos quas, animi perspiciatis nam consectetur earum adipisci, repellendus laudantium.</p>
+                  <button><a href="/order">Book Now</a></button>
+                </div>
+                <div class="col-lg-5">
+                  <img src="{% static 'images/pt_img/shkhar.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
+                </div>
+              </div>
+            </div>
+              
+      
+            <div class="py-5 container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="{% static 'images/pt_img/sushil.jpg'%}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
+                </div>
+                <div class="col-lg-7">
+                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem;">Pt. Sushil Tiwari</h3>
+                  <p class="font-weight-bold">पण्डित (पंडित) का अर्थ है विद्वान या अध्यापक से है, विशेषकर वह जो संस्कृत और हिन्दू विधि, धर्म, संगीत या दर्शनशास्त्र में दक्ष हो। अपने मूल अर्थ में 'पण्डित' शब्द का तात्पर्य हमेशा उस हिन्दू से लिया जाता है जिसने वेदों का कोई एक मुख्य भाग उसके उच्चारण और गायन के लय व ताल सहित कण्ठस्थ कर लिया हो।
+                    .</p>
+                  <p class="font-weight-bold"> div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur iure dolore dolorum eum ex, expedita voluptate est adipisci repudiandae. Minus tenetur ut veritatis non hic beatae velit? Eius, totam, officia?</p>
+                  <p class="font-weight-bold">Enim numquam autem, suscipit repellat vero, voluptas adipisci provident ad quidem dolorum minus, architecto. Nostrum deleniti nesciunt consequatur tempora repudiandae quos quas, animi perspiciatis nam consectetur earum adipisci, repellendus laudantium.</p>
+                  <button><a href="/order">Book Now</a></button>
+                </div>
+              </div>
+            </div>
+              
+      
+            <div class="py-5 container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem;">Pt. Ramshankar Awasthi</h3>
+                  <p class="font-weight-bold">पण्डित (पंडित) का अर्थ है विद्वान या अध्यापक से है, विशेषकर वह जो संस्कृत और हिन्दू विधि, धर्म, संगीत या दर्शनशास्त्र में दक्ष हो। अपने मूल अर्थ में 'पण्डित' शब्द का तात्पर्य हमेशा उस हिन्दू से लिया जाता है जिसने वेदों का कोई एक मुख्य भाग उसके उच्चारण और गायन के लय व ताल सहित कण्ठस्थ कर लिया हो।
+                    .</p>
+                  <p class="font-weight-bold"> div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur iure dolore dolorum eum ex, expedita voluptate est adipisci repudiandae. Minus tenetur ut veritatis non hic beatae velit? Eius, totam, officia?</p>
+                  <p class="font-weight-bold">Enim numquam autem, suscipit repellat vero, voluptas adipisci provident ad quidem dolorum minus, architecto. Nostrum deleniti nesciunt consequatur tempora repudiandae quos quas, animi perspiciatis nam consectetur earum adipisci, repellendus laudantium.</p>
+                  <button><a href="/order">Book Now</a></button>
+                </div>
+                <div class="col-lg-5">
+                  <img src="{% static 'images/pt_img/ramshankar.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
+                </div>
+              </div>
+            </div>
+
+ <div class="py-5 container">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="{% static 'images/pt_img/Vibhav.jpg'%}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
+                </div>
+                <div class="col-lg-7">
+                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem;">Pt. Vivhav Agnihotri</h3>
+                  <p class="font-weight-bold">पण्डित (पंडित) का अर्थ है विद्वान या अध्यापक से है, विशेषकर वह जो संस्कृत और हिन्दू विधि, धर्म, संगीत या दर्शनशास्त्र में दक्ष हो। अपने मूल अर्थ में 'पण्डित' शब्द का तात्पर्य हमेशा उस हिन्दू से लिया जाता है जिसने वेदों का कोई एक मुख्य भाग उसके उच्चारण और गायन के लय व ताल सहित कण्ठस्थ कर लिया हो।
+                    .</p>
+                  <p class="font-weight-bold"> div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur iure dolore dolorum eum ex, expedita voluptate est adipisci repudiandae. Minus tenetur ut veritatis non hic beatae velit? Eius, totam, officia?</p>
+                  <p class="font-weight-bold">Enim numquam autem, suscipit repellat vero, voluptas adipisci provident ad quidem dolorum minus, architecto. Nostrum deleniti nesciunt consequatur tempora repudiandae quos quas, animi perspiciatis nam consectetur earum adipisci, repellendus laudantium.</p>
+                  <button><a href="/order">Book Now</a></button>
+                </div>
+              </div>
+            </div>
+
+            
+            <br>
+       <!-- Start Footer  -->
+       <footer>
+        <div class="footer-main">
+            <div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-top-box">
+							<h3>Business Time</h3>
+							<ul class="list-time">
+								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-top-box">
+							<h3>Newsletter</h3>
+							<form class="newsletter-box">
+								<div class="form-group">
+									<input class="" type="email" name="Email" placeholder="Email Address*" />
+									<i class="fa fa-envelope"></i>
+								</div>
+								<button class="btn hvr-hover" type="submit">Submit</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-top-box">
+							<h3>Social Media</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            </ul>
+						</div>
+					</div>
+				</div>
+				<hr>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-widget">
+                            <h4>About Freshshop</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4>Information</h4>
+                            <ul>
+                                <li><a href="/about-us">About Us</a></li>
+                                <li><a href="/services">Service</a></li>
+                                <li><a href="/team">Our Teams</a></li>
+                                <li><a href="/contact-us">Contact Us</a></li>
+                                <li><a href="/order">Book Now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link-contact">
+                            <h4>Contact Us</h4>
+                            <ul>
+                                <li>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- Start copyright  -->
+    <div class="footer-copyright">
+        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
+            <a href="https://html.design/">Bytezip Technologies</a></p>
+    </div>
+    <!-- End copyright  -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-select.js' %}"></script>
+    <script src="{% static 'js/inewsticker.js' %}"></script>
+    <script src="{% static 'js/bootsnav.js' %}"></script>
+    <script src="{% static 'js/images-loded.min.js' %}"></script>
+    <script src="{% static 'js/isotope.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
