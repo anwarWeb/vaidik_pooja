@@ -35,6 +35,7 @@
 
 </head>
 
+
 <body>
     
     <div class="main-top">
@@ -44,7 +45,7 @@
 					
                     {% comment %} <div class="our-link">
                         <ul>
-                            <li><a href="#"><i class="fa fa-phone-square"></i> 0755-4012502</a></li>
+                            <li><a href="#"><i class="fa fa-phone-square"></i> 9935724048</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
@@ -68,7 +69,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="/" style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                <img src="{% static 'images/mylogo.png' %}" alt="" srcset="" style="width:80px;  ">
+                    <!-- <a class="navbar-brand" href="/" style="font-weight: bold; color: red;  font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a> -->
                 </div>
                 <!-- End Header Navigation -->
 
@@ -121,25 +123,25 @@
                 <p class="h3" style="color:green;"><b>{{message}}</b></p>
                     <div class="contact-form-right">
                         <h2>GET IN TOUCH</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac ex venenatis ultricies at cursus mauris.</p>
-                        <form  action="/contactSave/" method="POST">
+                        
+                        <form  action="/contact-us/" method="POST">
                         {% csrf_token %}
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <input type="text" class="form-control" onkeypress='charOnly(event)' id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Mobile number" required data-error="Please enter your number">
+                                        <input type="text" class="form-control" onkeypress='validate(event)' id="phone" name="phone" minlength="8" maxlength="15" placeholder="Mobile number" required data-error="Please enter your number">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -159,173 +161,41 @@
                     </div>
                 </div>
 				<div class="col-lg-4 col-sm-12">
-                    <div class="contact-info-left">
+
+                    <img src="{% static 'images/g50.jpg' %}" style="margin-top: 25%;height: 50%;" alt="">
+                    {% comment %} <div class="contact-info-left">
                         <h2>CONTACT INFO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
+                        <p> </p>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 9000 <br>Preston Street Wichita,<br> KS 87213 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address:Panki Mandir, <br>Near Gangaganj Colony, <br>Dakshineshwar Mandir <br> kanpur India</p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770" style="color: white !important;">+1-888 705 770</a></p>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="9935724048">9935724048</a></p>
                             </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com" style="color:white !important">contactinfo@gmail.com</a></p>
-                            </li>
+                           
+                            
+                           
                         </ul>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </div>
     </div>
 
 
-
-
-
-
-    
-
-
-
-    <h4 style="color: darkred; font-size: 3.5rem; font-weight: bold; font-style: italic; font-family: cursive; text-align: center; justify-content: center; margin-bottom: 40px;">--All Services--</h4>
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-         <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/21.jpg'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/91.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/92.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/93.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/94.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/95.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/96.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/97.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/98.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/99.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-   
 
     <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Business Time</h3>
-							<ul class="list-time">
-								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Newsletter</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="Email Address*" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button class="btn hvr-hover" type="submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            </ul>
-						</div>
-					</div>
-				</div>
+ 
 				<hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                            <h4>About Vaidikpooja</h4>
+                            <p>It's an Online platform through which users can contact with our pandit's for various customs ,rituals and pooja recitations virtually</p> 
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -345,14 +215,16 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address:Panki Mandir, <br>Near Gangaganj Colony, <br>Dakshineshwar Mandir <br> kanpur India</p>
+                                </li>
+                                
+                                <li>
+                                    <p><i class="fas fa-phone-square"></i>Phone:9935724048</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fab fa-whatsapp"></i>Whatsapp:6394048201</p>
                                 </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -365,12 +237,53 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
-            <a href="https://html.design/">Bytezip Technologies</a></p>
+            <a href="https://bytezip.in/">Bytezip Technologies</a></p>
     </div>
     <!-- End copyright  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none; line-height: 35px !important;">&uarr;</a>
 
+
+    <script>
+        function validate(evt) {
+       var theEvent = evt || window.event;
+     
+       // Handle paste
+       if (theEvent.type === 'paste') {
+           key = event.clipboardData.getData('text/plain');
+       } else {
+       // Handle key press
+           var key = theEvent.keyCode || theEvent.which;
+           key = String.fromCharCode(key);
+       }
+       var regex = /[0-9]|\./;
+       if( !regex.test(key) ) {
+         theEvent.returnValue = false;
+         if(theEvent.preventDefault) theEvent.preventDefault();
+       }
+     }
+
+
+     function charOnly(evt) {
+       var theEvent = evt || window.event;
+     
+       // Handle paste
+       if (theEvent.type === 'paste') {
+           key = event.clipboardData.getData('text/plain');
+       } else {
+       // Handle key press
+           var key = theEvent.keyCode || theEvent.which;
+           key = String.fromCharCode(key);
+       }
+       var regex =/^[A-Za-z\+]+$/;
+       if( !regex.test(key) ) {
+         theEvent.returnValue = false;
+         if(theEvent.preventDefault) theEvent.preventDefault();
+       }
+     }
+
+
+         </script>
      <!-- ALL JS FILES -->
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
@@ -387,6 +300,17 @@
     <script src="{% static 'js/form-validator.min.js' %}"></script>
     <script src="{% static 'js/contact-form-script.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+
+    <script type="text/javascript">
+        function disableBackButton()
+        {
+          window.history.forward();
+        }
+        setTimeout("disableBackButton()", 0);
+         $(document).ready(function () {
+            disableBackButton();
+         });
+     </script>
 </body>
 
 </html>

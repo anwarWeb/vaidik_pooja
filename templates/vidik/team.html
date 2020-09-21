@@ -20,7 +20,7 @@
     <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
 
-     <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css ' %}">
     <!-- Site CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css ' %}">
@@ -29,138 +29,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
-
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-    a{
-        text-decoration: none;
-        color: black;
-        
-    }
-    a:hover{
-        text-decoration: none;
-    }
-    li{
-        list-style: none;
-    }
-    
-    
-    .center-div{
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-    }
-     
-    
-    h1{
-      font-size: 50px;
-    }
-    video {
-      
-      width: 100%;
-      height: 290px;
-    }
-    
-    
-    
-    
-    /* .about-section {
-        padding: 90px;
-        text-align: center;
-        background-image:url("images/g21.jpg");
-        background-position:fixed;
-        background-size: cover;
-        color: white;
-        
-      } */
-    
-      
-      html {
-        box-sizing: border-box;
-      }
-      
-      *, *:before, *:after {
-        box-sizing: inherit;
-      }
-      
-      .column {
-        float: left;
-        width: 33.3%;
-        margin-bottom: 16px;
-        padding: 0 8px;
-      }
-      
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: 8px;
-      }
-      
-      
-      .container {
-        padding: 0 16px;
-      }
-      
-      .container::after, .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-      
-      .title {
-        color: grey;
-      }
-      
-      button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white !important;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-      }
-      
-      button:hover {
-        background-color: gray;
-      }
-      
-      @media screen and (max-width: 650px) {
-        .column {
-          width: 100%;
-          display: block;
-        }
-      }
-    
-    .col-lg-7 button {
-       width: 150px;
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 8px;
-      color: white !important;
-      background-color:rgb(113, 113, 236);
-      text-align: center;
-      cursor: pointer;
-    }
-    .col-lg-7 button:hover{
-      background-color: skyblue;
-    }
-    .col-lg-5 img{
-      
-        box-shadow:0 0 20px #504848
-    }
-     
-</style>
 
 </head>
 
@@ -170,7 +42,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					
+					<!-- <div class="custom-select-box">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+							<option>¥ JPY</option>
+							<option>$ USD</option>
+							<option>€ EUR</option>
+						</select>
+                    </div> -->
+                    <!-- <div class="right-phone-box">
+                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                    </div> -->
                     {% comment %} <div class="our-link">
                         <ul>
                             <li><a href="#"><i class="fa fa-phone-square"></i> 0755-4012502</a></li>
@@ -197,12 +78,13 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="/" style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                <img src="{% static 'images/mylogo.png' %}" alt="" srcset="" style="width:80px;  ">
+                    <!-- <a class="navbar-brand" href="/" style="font-weight: bold;   color:red; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a> -->
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                 <div class="collapse navbar-collapse" id="navbar-menu">
+                <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item "><a class="nav-link" href="/">&nbsp;Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about-us">&nbsp;About us</a></li>
@@ -213,6 +95,7 @@
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
+
                 <!-- Start Atribute Navigation -->
                 <!-- End Atribute Navigation -->
             </div>
@@ -222,115 +105,175 @@
         </nav>
         <!-- End Navigation -->
     </header>
-    <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Our Team</h2>
-                    <!-- <ul class="breadcrumb">
+    <!-- End Main Top -->
+  <div class="all-title-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Our Team</h2>
+          <!-- <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active"> Contact Us </li>
                     </ul> -->
-                </div>
-            </div>
         </div>
+      </div>
     </div>
-      
-      <br>
-     <center>
-      <video controls autoplay style="width:50%; height:350px;">
-        <source src="{% static 'vedio/pooja_vedio.mp4'%}" type="video/mp4">
-        <source src="mov_bbb.ogg" type="video/ogg">
-      </video>
-         </center>
-          
-            <div class="py-5 container">
-              <div class="row">
-                <div class="col-lg-5">
-                  <img src="{% static 'images/pt_img/shivnarayan.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
-                </div>
-                <div class="col-lg-7">
-                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood;text-align:center;">Pt. Shivnarayan Awasthi</h3>
-                  <br>
-                  <p class="font-weight-bold" style="font-size:20px;"> Pandit Shivnarayan Awasthi ji is well qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has over 5 years of experience in vedic ceremonies. He has served at many places and is currently living in Bhopal MP, India.
-                    .</p>
-                 
-                  
-                </div>
-              </div>
-            </div>
-              
-      
-            <div class="py-5 container">
-              <div class="row">
-                <div class="col-lg-7">
-                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">Pt. Shekhar Tiwari</h3>
-                  <br>
-                  <p class="font-weight-bold" style="font-size:20px;">Pandit Shekhar Tiwari ji is well qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has over 3 years of experience in vedic ceremonies. He has served at many places and is currently living in Bhopal MP, India.
-                    .</p>
-                  
-                  
-                </div>
-                <div class="col-lg-5">
-                  <img src="{% static 'images/pt_img/shkhar.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
-                </div>
-              </div>
-            </div>
-              
-      
-            <div class="py-5 container">
-              <div class="row">
-                <div class="col-lg-5">
-                  <img src="{% static 'images/pt_img/sushil.jpg'%}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
-                </div>
-                <div class="col-lg-7">
-                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">Pt. Sushil Tiwari</h3>
-                  <br>
-                  <p class="font-weight-bold" style="font-size:20px;">Pandit Sushil Tiwari ji is well qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has over 5 years of experience in vedic ceremonies. He has served at many places and is currently living in Bhopal MP, India.
-                    </p>
-                </div>
-              </div>
-            </div>
-              
-      
-            <div class="py-5 container">
-              <div class="row">
-                <div class="col-lg-7">
-                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">Pt. Ramshankar Awasthi</h3>
-                  <br>
-                  <p class="font-weight-bold" style="font-size:20px;" >
-                  Pandit Ranshankar Awasthi ji is well qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has over 10 years of experience in vedic ceremonies. He has served at many places and is currently living in Bhopal MP, India.</p>
-                  
-                </div>
-                <div class="col-lg-5">
-                  <img src="{% static 'images/pt_img/ramshankar.jpg' %}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
-                </div>
-              </div>
-            </div>
+  </div>
 
- <div class="py-5 container">
-              <div class="row">
-                <div class="col-lg-5">
-                  <img src="{% static 'images/pt_img/Vibhav.jpg'%}" alt="" class="w-100 mb-4 border border-md border-white shadow-sm">
-                </div>
-                <div class="col-lg-7">
-                  <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">Pt. Vivhav Agnihotri</h3>
-                  <br>
-                  <p class="font-weight-bold" style="font-size:20px;">Pandit Vivhav Agnihotri ji is well qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has over 6 years of experience in vedic ceremonies. He has served at many places and is currently living in Bhopal MP, India.
-                    .</p>
-                  
-                  
-                </div>
-              </div>
-            </div>
+  <br>
 
-            
-            <br>
-       <!-- Start Footer  -->
-       <footer>
-     <div class="footer-main">
-            <div class="container">
-				 <!---------<div class="row">
+  
+ 
+    <!-- <video controls="controls" src="{% static 'vedio/pooja_vedio.mp4'%}">
+      Your browser does not support the HTML5 Video element.
+  </video> -->
+  <div class="video"style="text-align:center;">
+  <video width="600" controls>
+    <source src="{% static 'vedio/pooja_vedio.mp4'%}" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
+</div>
+<!-- 
+    <iframe width="560" height="315" src="{% static 'vedio/pooja_vedio.mp4'%}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  controls></iframe> -->
+ 
+
+  <div class="py-5 container">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="{% static 'images/pt_img/shivnarayan.jpg' %}" alt=""
+          class="w-100 mb-4 border border-md border-white shadow-sm">
+      </div>
+      <div class="col-lg-7">
+        <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood;text-align:center;">
+         <P style="padding-top:10px;"></P> Pt. Shivnarayan Awasthi</P></h3>
+        <br>
+        <p class="font-weight-bold" style="font-size:20px; margin-top: 30px;"> Pandit Shivnarayan Awasthi ji is well qualified pandit with
+          his training and education from Maharishi Ved Vigyan Vidyapeeth. He has served at many places and is currently
+          living in Kanpur, India.
+
+          The priests or priests are called in private and public yajnas and other rituals for the Ved Mantrochar and in
+          return they are given away by giving alms and donations. The purpose of this type of chanting is to live the
+          atmosphere of that work with the spiritual progress of the listener while listening to it with a calm mind.
+          Most of the priests are vegetarian due to spiritual reasons because they are usually expected to keep
+          themselves pure with body and mind
+          </p>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="py-5 container">
+    <div class="row">
+      <div class="col-lg-7">
+        <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">
+         <P style="padding-top:10px;"> Pt. Shekhar Tiwari</P></h3>
+        <br>
+        <p class="font-weight-bold" style="font-size:20px; margin-top: 30px;">Pandit Shekhar Tiwari ji is well qualified
+          pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has served at many places and
+          is currently living in Kanpur, India.
+
+          The priests or priests are called in private and public yajnas and other rituals for the Ved Mantrochar and in
+          return they are given away by giving alms and donations. The purpose of this type of chanting is to live the
+          atmosphere of that work with the spiritual progress of the listener while listening to it with a calm mind.
+          Most of the priests are vegetarian due to spiritual reasons because they are usually expected to keep
+          themselves pure with body and mind
+          </p>
+
+
+      </div>
+      <div class="col-lg-5">
+        <img src="{% static 'images/pt_img/shkhar.jpg' %}" alt=""
+          class="w-100 mb-4 border border-md border-white shadow-sm">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="py-5 container">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="{% static 'images/pt_img/sushil.jpg'%}" alt=""
+          class="w-100 mb-4 border border-md border-white shadow-sm">
+      </div>
+      <div class="col-lg-7">
+        <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">
+         <p  style="padding-top:10px;"> Pt. Sushil Tiwari </p></h3>
+        <br>
+        <p class="font-weight-bold" style="font-size:20px; margin-top: 30px;">Pandit Sushil Tiwari ji is well qualified
+          pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has served at many places and
+          is currently living in Kanpur, India.
+
+          The priests or priests are called in private and public yajnas and other rituals for the Ved Mantrochar and in
+          return they are given away by giving alms and donations. The purpose of this type of chanting is to live the
+          atmosphere of that work with the spiritual progress of the listener while listening to it with a calm mind.
+          Most of the priests are vegetarian due to spiritual reasons because they are usually expected to keep
+          themselves pure with body and mind
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="py-5 container">
+    <div class="row">
+      <div class="col-lg-7">
+        <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center;">
+<p style="padding-top:10px;">Pt. Ramshankar Awasthi</p></h3>
+        <br>
+        <p class="font-weight-bold" style="font-size:20px; margin-top: 30px;">
+          Pandit Ranshankar Awasthi ji is well qualified pandit with his training and education from Maharishi Ved
+          Vigyan Vidyapeeth. He has served at many places and is currently living in Kanpur, India.
+
+          The priests or priests are called in private and public yajnas and other rituals for the Ved Mantrochar and in
+          return they are given away by giving alms and donations. The purpose of this type of chanting is to live the
+          atmosphere of that work with the spiritual progress of the listener while listening to it with a calm mind.
+          Most of the priests are vegetarian due to spiritual reasons because they are usually expected to keep
+          themselves pure with body and mind</p>
+
+      </div>
+      <div class="col-lg-5">
+        <img src="{% static 'images/pt_img/ramshankar.jpg' %}" alt=""
+          class="w-100 mb-4 border border-md border-white shadow-sm">
+      </div>
+    </div>
+  </div>
+
+  <div class="py-5 container">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="{% static 'images/pt_img/Vibhav.jpg'%}" alt=""
+          class="w-100 mb-4 border border-md border-white shadow-sm">
+      </div>
+      <div class="col-lg-7">
+        <h3 style="color: darkred;font-weight: bold; font-size: 1.9rem; background-color:burlywood; text-align:center; justify-content: center;">
+         <p style="padding-top:10px;"> Pt. Vivhav Agnihotri </p></h3>
+        <br>
+        <p class="font-weight-bold" style="font-size:20px; margin-top: 30px;">Pandit Vivhav Agnihotri ji is well
+          qualified pandit with his training and education from Maharishi Ved Vigyan Vidyapeeth. He has served at many
+          places and is currently living in Kanpur, India.
+
+          The priests or priests are called in private and public yajnas and other rituals for the Ved Mantrochar and in
+          return they are given away by giving alms and donations. The purpose of this type of chanting is to live the
+          atmosphere of that work with the spiritual progress of the listener while listening to it with a calm mind.
+          Most of the priests are vegetarian due to spiritual reasons because they are usually expected to keep
+          themselves pure with body and mind
+          </p>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <!-- Start Footer  -->
+  <footer>
+    <div class="footer-main">
+      <div class="container">
+        <!---------<div class="row">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Business Time</h3>
@@ -367,72 +310,74 @@
 						</div>
 					</div>
 				</div>--------->
-				<hr>
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>It's a Online Pooja website in which any body can contact pandit online by this platform.</p> 						
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link">
-                            <h4>Information</h4>
-                            <ul>
-                                <li><a href="/about-us">About Us</a></li>
-                                <li><a href="/services">Service</a></li>
-                                <li><a href="/team">Our Teams</a></li>
-                                <li><a href="/contact-us">Contact Us</a></li>
-                                <li><a href="/order">Book Now</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <hr>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-widget">
+              <h4>About Vaidikpooja</h4>
+              <p>It's an Online platform through which users can contact with our pandit's for various customs ,rituals and pooja recitations virtually</p>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-link">
+              <h4>Information</h4>
+              <ul>
+                <li><a href="/about-us">About Us</a></li>
+                <li><a href="/services">Service</a></li>
+                <li><a href="/team">Our Teams</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+                <li><a href="/order">Book Now</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="footer-link-contact">
+              <h4>Contact Us</h4>
+              <ul>
+                <li>
+                  <p><i class="fas fa-map-marker-alt"></i>Address:Panki Mandir, <br>Near Gangaganj Colony,
+                    <br>Dakshineshwar Mandir<br> kanpur India </p>
+                </li>
+                <li>
+                  <p><i class="fas fa-phone-square"></i>Phone:9935724048 </p>
+                </li>
+                <li>
+                  <p><i class="fab fa-whatsapp"></i>Whatsapp:6394048201</p>
+                </li>
+
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!-- End Footer  -->
-
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
-            <a href="https://html.design/">Bytezip Technologies</a></p>
+      </div>
     </div>
-    <!-- End copyright  -->
+  </footer>
+  <!-- End Footer  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+  <!-- Start copyright  -->
+  <div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
+      <a href="https://bytezip.in/">Bytezip Technologies</a></p>
+  </div>
+  <!-- End copyright  -->
 
-    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- ALL PLUGINS -->
-    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap-select.js' %}"></script>
-    <script src="{% static 'js/inewsticker.js' %}"></script>
-    <script src="{% static 'js/bootsnav.js' %}"></script>
-    <script src="{% static 'js/images-loded.min.js' %}"></script>
-    <script src="{% static 'js/isotope.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'js/baguetteBox.min.js' %}"></script>
-    <script src="{% static 'js/form-validator.min.js' %}"></script>
-    <script src="{% static 'js/contact-form-script.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script>
+  <a href="#" id="back-to-top" title="Back to top" style="display: none; line-height: 35px !important;">&uarr;</a>
+
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  {% comment %} <script src="{% static 'js/popper.min.js' %}"></script> {% endcomment %}
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- ALL PLUGINS -->
+  <script src="{% static 'js/jquery.superslides.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-select.js' %}"></script>
+  <script src="{% static 'js/inewsticker.js' %}"></script>
+  <script src="{% static 'js/bootsnav.js' %}"></script>
+  <script src="{% static 'js/images-loded.min.js' %}"></script>
+  <script src="{% static 'js/isotope.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/baguetteBox.min.js' %}"></script>
+  <script src="{% static 'js/form-validator.min.js' %}"></script>
+  <script src="{% static 'js/contact-form-script.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>

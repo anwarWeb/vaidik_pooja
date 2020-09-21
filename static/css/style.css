@@ -26,7 +26,7 @@
 @import url(bootsnav.css);
 @import url(owl.carousel.min.css);
 @import url(jquery-ui.css);
-@import url(nice-select.css);
+/* @import url(nice-select.css); */
 @import url(baguetteBox.min.css);
 
 /*------------------------------------------------------------------
@@ -244,11 +244,11 @@ i {
      right: 40px;
      z-index: 9999;
      width: 32px;
-     height: 32px;
+     height: 34px;
      text-align: center;
-     line-height: 5px;
-     background: darkred;
-     color: #ffffff;
+     line-height: 55px !important;
+     color:white !important;
+     background-color: darkred;
      cursor: pointer;
      border: 0;
      border-radius: 0px;
@@ -836,7 +836,7 @@ i {
      color: #ffffff;
 }
 .bg-light{
-    background-color: whitesmoke!important;
+    background: transparent!important;
 }
 .poo{
     text-align: center;
@@ -1349,9 +1349,9 @@ i {
      margin-top: 0;
      opacity: 1;
      right: 0px;
-     -webkit-transition: all 0.3s ease;
-     -o-transition: all 0.3s ease;
-     transition: all 0.3s ease;
+     -webkit-transition: all 0.1s ease;
+     -o-transition: all 0.1s ease;
+     transition: all 0.1s ease;
 }
  .main-instagram.owl-carousel .owl-nav button.owl-next:hover, .main-instagram.owl-carousel .owl-nav button.owl-prev:hover{
      background: darkred;
@@ -1557,8 +1557,8 @@ i {
      -ms-transition: all .3s ease-in-out;
 }
  .footer-link ul li a::before {
-     font-family: FontAwesome;
-     content: "\f105";
+     
+     /* content: "\f105"; */
      position: absolute;
      left: 5px;
      line-height: 35px;
@@ -1645,7 +1645,7 @@ i {
 
 
 .all-title-box{
-     background: url("../images/39.jpg") no-repeat center center;
+     background: url("../images/b22.jpg") no-repeat center center !important;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -ms-background-size: cover;
@@ -1697,15 +1697,12 @@ i {
 }
  .noo-sh-title{
      font-size: 28px;
-     text-transform: uppercase;
      font-style: normal;
      font-weight: 700;
 	 margin-bottom: 30px;
 }
 .noo-sh-title-top{
      font-size: 30px;
-     text-transform: uppercase;
-     font-style: italic;
      font-weight: bold;
      margin-bottom: 0px;
      color: darkred;
@@ -2056,9 +2053,7 @@ i {
      justify-content: space-between;
      padding: 5px 0;
 }
- .nice-select.wide{
-     width: 75%;
-}
+ 
  .product-item-filter .toolbar-sorter-right span{
      line-height: 42px;
      padding-right: 15px;
@@ -2515,17 +2510,17 @@ i {
 }
  .contact-info-left{
      padding: 20px;
-     background: url(../images/1.jfif) no-repeat center;
+     border: 2px solid black;
      background-size: cover;
-     margin-top: 70px;
+     margin-top: 130px;
 }
  .contact-info-left h2{
      font-size: 25px;
      font-weight: bold;
-     color: white;
+     color:black;
 }
  .contact-info-left p{
-     color: white;
+     color: black;
      margin-bottom: 15px;
 }
  .contact-info-left ul li{
@@ -2533,7 +2528,7 @@ i {
 }
  .contact-info-left ul li p{
      font-size: 16px;
-     color: white;
+     color: black;
      font-weight: 300;
      padding-right: 16px;
      padding-left: 25px;
@@ -2545,7 +2540,7 @@ i {
      left: -15px;
      top: -14px;
      padding-right: 6px;
-     color: yellow;
+     color: black;
 }
  .contact-info-left ul li p a:hover{
      color: darkred;

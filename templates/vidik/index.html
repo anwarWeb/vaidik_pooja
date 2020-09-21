@@ -25,9 +25,9 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css ' %}">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/responsive.css' %}"> -->
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/custom.css' %}"> -->
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -78,7 +78,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="/" style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                <img src="{% static 'images/mylogo.png' %}" alt="" srcset="" style="width:80px;  ">
+                    <!-- <a class="navbar-brand" href="/" style="font-weight: bold;   color:red; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a> -->
                 </div>
                 <!-- End Header Navigation -->
 
@@ -117,7 +118,7 @@
                         <div class="col-md-12">
                             <h1 class="m-b-20"><strong>Welcome To vaidikpooja</strong></h1>
                             <p class="m-b-40">ऊँ एकदन्ताय विद्महे वक्रतुण्डाय धीमहि तन्नो दन्तिः प्रचोदयात् ।। उक्त मंत्र का जप करने से पहले विधिवत भगवान गणेश जी का पूजन अवश्य करें।</p>
-                            <p><a class="btn hvr-hover" href="/order">Book Pandit Online</a></p>
+                            <p><a class="btn hvr-hover" href="/order">Book Pooja Online</a></p>
                             
                         </div>
                     </div>
@@ -156,15 +157,20 @@
     </div>
     <!-- End Slider -->
 <center>
-<div class="container row">
-  <div class="column col-md-6 mr-6 mt-4">
+<div class="container row" style="margin-left:10%;">
+  <div class="column col-md-3 mr-5 mt-2">
     <img src="{% static 'images/brahmananda_saraswati.jpeg' %}" alt="Snow" style="width:250px; height:250px;">
     <h2><b>Shri Brahmananda Saraswati Ji</b></h2>
   </div>
   <br>
-  <div class="column col-md-6 mr-6 mt-4">
+  <div class="column col-md-3 mr-5 mt-2">
+    <img src="{% static 'images/aadi_guru.jpg' %}" alt="Snow" style="width:250px; height:250px;">
+    <h2><b>Shri Aadi Guru Shankaracharya Ji </b></h2>
+  </div>
+  <br>
+  <div class="column col-md-3 mr-5 mt-2">
     <img src="{% static 'images/Maharishi_mahesh yogiji _1.jpg' %}" alt="Snow" style="width:250px; height:250px;">
-    ,<h2><b>Shri Maharishi Mahesh Yogi ji </b></h2>
+    <h2><b>Shri Maharishi Mahesh Yogi ji </b></h2>
   </div>
 </div>
 </center>
@@ -195,37 +201,37 @@ Pt. Vivhav Agnihotri
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{% static 'images/71.jpg' %}" alt="" />
-                        <a class="btn hvr-hover" href="#">गृह प्रवेश</a>
+                        <a href="/order" class="btn hvr-hover" href="#">वास्तु पूजा</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{% static 'images/72.jpg '%}" alt="" />
-                        <a class="btn hvr-hover" href="#">भूमि पूजन</a>
+                        <a href="/order" class="btn hvr-hover" href="#">भूमि पूजन</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{% static 'images/73.jpg'%}" alt="" />
-                        <a class="btn hvr-hover" href="#">शादी  विवाह</a>
+                        <a href="/order" class="btn hvr-hover" href="#">वर कन्या विवाह</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
                         <img class="img-fluid" src="{% static 'images/74.jpg'%}" alt="" />
-                        <a class="btn hvr-hover" href="#"> यज्ञ हवन</a>
+                        <a href="/order" class="btn hvr-hover" href="#"> यज्ञ हवन</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
  
-    <h4 class="poo">--All Services--</h4>
+    <h4 class="poo">--All Services--</h4> 
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
-           <div class="item">
+            <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{% static 'images/21.jpg'%}" alt="" />
+                    <img src="{% static 'images/94.png'%}" alt="" />
                     <div class="hov-in">
                         <a href="/order">Book Now</a>
                     </div>
@@ -273,7 +279,7 @@ Pt. Vivhav Agnihotri
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{% static 'images/96.png'%}" alt="" />
+                    <img src="{% static 'images/99.png'%}" alt="" />
                     <div class="hov-in">
                         <a href="/order">Book Now</a>
                     </div>
@@ -306,8 +312,7 @@ Pt. Vivhav Agnihotri
         </div>
     </div>
 
-
-
+<!-- 
     <h4 class="tum" style="font-size: 3.5rem; font-weight: bold; text-align: center; justify-content: center; font-style: italic;
      font-family: cursive; color: darkred; margin: 70px;">--Our Happy Clients--</h4> 
 <div class="hum">
@@ -316,26 +321,28 @@ Pt. Vivhav Agnihotri
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="https://i.imgur.com/lE89Aey.jpg">
-                        <div id="image-caption">Nick Doe</div>
+                        <p>I was experiencing some difficulties in my work place. I took the advice of the astrologer on vaidikpooja.com and follwed the step by step pooja they prescribed now all is fine. </p> <img src="{% static 'images/icon/12.jpg'%}">
+                        <div id="image-caption">Nikesh </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
-                        <div id="image-caption">Cromption Greves</div>
+                        <p>I am delighted by the services that they are provided by the astrologer  of the vaidikpooja.com . They not only providecorrect remedies but with meaning analysis of your problems.</p> <img src="{% static 'images/icon/13.png'%}" class="img-fluid">
+                        <div id="image-caption">Shreya</div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption">
-                        <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
-                        <div id="image-caption">Harry Mon</div>
+                        <p>I aapreciate the good work of vaidikpooja.com I had booked pooja and anushthan online. It was done as per scheduled.</p> <img src="{% static 'images/icon/11.jpg'%}" class="img-fluid">
+                        <div id="image-caption">Gourav</div>
                     </div>
                 </div>
-            </div> <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
+            </div>
+            <button><a href="" style="text-align: center !important; justify-content: center;
+                font-size: 22px; font-weight: bold;">Upload Reviews</a></button> <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
         </div>
     </div>
-    </div>
+</div> -->
 
 
 
@@ -344,7 +351,7 @@ Pt. Vivhav Agnihotri
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
+				<!---------<div class="row">
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Business Time</h3>
@@ -380,13 +387,13 @@ Pt. Vivhav Agnihotri
                             </ul>
 						</div>
 					</div>
-				</div>
+				</div>----------->
 				<hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>It's a Online Pooja website in which any body can contact pandit online by this platform.</p> 
+                            <h4>About vaidikpooja</h4>
+                            <p>It's an Online platform through which users can contact with our pandit's for various customs ,rituals and pooja recitations virtually</p> 
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -406,14 +413,15 @@ Pt. Vivhav Agnihotri
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address:Panki Mandir, <br>Near Gangaganj Colony, <br>Dakshineshwar Mandir<br> kanpur India </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705 770</a></p>
+                                    <p><i class="fas fa-phone"></i>Phone:9935724048</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fab fa-whatsapp"></i>Whatsapp:6394048201</p>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -426,11 +434,11 @@ Pt. Vivhav Agnihotri
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered by :
-            <a href="https://html.design/">Bytezip Technologies</a></p>
+            <a href="https://bytezip.in/">Bytezip Technologies</a></p>
     </div>
     <!-- End copyright  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none; line-height: 35px !important;">&uarr;</a>
 
     <!-- ALL JS FILES -->
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>

@@ -86,6 +86,7 @@
 </style>
 </head>
 
+
 <body>
     
     <div class="main-top">
@@ -119,7 +120,8 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="/" style="font-weight: bold; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a>
+                <img src="{% static 'images/mylogo.png' %}" alt="" srcset="" style="width:80px;  ">
+                    <!-- <a class="navbar-brand" href="/" style="font-weight: bold; color: red; font-size: 22px;">&nbsp;&nbsp;&nbsp;&nbsp; VAIDIKPOOJA</a> -->
                 </div>
                 <!-- End Header Navigation -->
 
@@ -159,23 +161,26 @@
                 </div>
             </div>
         </div>
+        <hr>
     </div>
+
 
 
 
     <div class="container" style="background:transparent; margin-top: 60px; margin-bottom: 60px;">
             <div class="row">
                     <div class="col-md-8">
+                        <p class="h3" style="color:red;"><b>{{error}}</b></p>
                     <p class="h3" style="color:green;"><b>{{message}}</b></p>
                         <div class="well well-sm">
-                            <form action="/orderSave" method="POST">
+                            <form action="/order/" method="POST">
                             {% csrf_token %}
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name">
                                             <b>Name *</b></label>
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required="required" />
+                                        <input type="text" onkeypress='charOnly(event)' class="form-control" name="name" id="name" placeholder="Enter name" required="required" />
                                     </div>
 
                                     <div class="form-group">
@@ -413,37 +418,40 @@
 		<option data-countryCode="ZW" value="+263">Zimbabwe (+263)</option>
 	</optgroup>
 </select>
- <input type="text" name="phone" class="form-control" name="phone" id="phone" placeholder="Enter phone" required="required" /></div>
+ <input type="text" class="form-control" onkeypress='validate(event)' name="phone" id="phone" placeholder="Enter phone" minlength="8" maxlength="15" required="required" /></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="Select of Puja">
-                                            <b>Select Puja *</b></label>
-                                        <select id="Select of Puja" name="select_pooja" class="form-control" required="required">
-                                            <option value="na" selected="">Choose One:</option>
-                                            <option value="Guru Parampara Pooja / ">Guru Parampara Pooja      </option>
-                                            <option value="Rudraabhishek 2100">Rudraabhishek 2100/-</option>
-                                            <option value="Mahamrityunjay Jaap 7500">Mahamrityunjay Jaap 7500/-</option>
-                                            <option value="Satchandi Yagya 10000">Satchandi Yagya 10000/-</option>
-                                            <option value="Durga Paath 5100">Durga Paath 5100/-</option>
-                                            <option value="Mahalaxmi Pooja">Mahalaxmi Pooja</option>
-                                            <option value="Sarv Badhao se nivaran hetu 5000/-">Sarv Badhao se nivaran hetu 5000/-</option>
-                                            <option value="Shatruon se Mukti hetu 50000/-">Shatruon se Mukti hetu 50000/- </option>
-                                            <option value="Pitambra Devi ki Pooja 50000/-">Pitambra Devi ki Pooja 50000/-</option>
+                                            <b>Select Pooja *</b></label>
+                                        <select id="Select of Puja" name="select_pooja" class="form-control" required>
+                                            <!-- <option value="na" >Choose One:</option> -->
+                                            <option value="Guru Parampara Pooja / " >Guru Parampara Pooja      </option>
+                                            <option value="Rudraabhishek 21000/-">Rudraabhishek 21000/-</option>
+                                            <option value="Mahamrityunjay Jaap 75000/-">Mahamrityunjay Jaap 75000/-</option>
+                                            <option value="Mahamrityunjay Yagya 51000/-">Mahamrityunjay Yagya 51000/-</option>
+                                            <option value="Satchandi Yagya 75000/-">Satchandi Yagya 75000/-</option>
+                                            <option value="Durga Nav Satra Paath 5100/-">Durga Nav Satra Paath 5100/-</option>
+                                            <option value="Mahalaxmi Yagya 41000/-">Mahalaxmi Yagya 41000/-</option>
+                                            <option value="Deepawali Poojan 41000/-">Deepawali Poojan 41000/-</option>
+                                            <option value="Sarv Badhao se nivaran hetu 41000/-">Sarv Badhao se nivaran hetu 41000/-</option>
+                                            <option value="Shatruon se Mukti hetu Yagya 41000/-">Shatruon se Mukti hetu Yagya 41000/- </option>
+                                            <option value="Pitambra Devi Yagya 51000/-">Pitambra Devi ki Pooja 51000/-</option>
                                             <option value="Vastu Pooja 50000/-">Vastu Pooja 50000/-</option>
-                                            <option value="Ganesh Pooja 50000/-">Ganesh Pooja 50000/-</option>
-                                            <option value="Saraswati Pooja 50000/-">Saraswati Pooja 50000/-</option>
-                                            <option value="Bhagwat Geeta Paath 5100/-">Bhagwat Geeta Paath 5100/- </option>
-                                            <option value="Saubhagya ki Prapti hetu Pooja 50000/-">Saubhagya ki Prapti hetu Pooja 50000/- </option>
+                                            <option value="Ganesh Yagya 41000/-">Ganesh Yagya 41000/-</option>
+                                            <option value="Saraswati Yagya 41000/-">Saraswati Pooja 41000/-</option>
+                                            <option value="Bhagwat Geeta Paath Yagya 21000/-">Bhagwat Geeta Paath Yagya 21000/- </option>
+                                            <option value="Saubhagya ki Prapti hetu Pooja 41000/-">Saubhagya ki Prapti hetu Pooja 41000/- </option>
                                             <option value="Var/Kanya Vivah ">Var/Kanya Vivah </option>
-                                            <option value="Jyotish se Sambandhit Pooja 2100/-">Jyotish se Sambandhit Pooja 2100/- </option>
+                                            <option value="Var/Kanya Vivah ">Bhumi Pujan</option>
+                                            <option value="Jyotish se Sambandhit Jaankari 3100/-">Jyotish se Sambandhit Jaankari 3100/- </option>
                                             <option value="Kundli Vichaar 2100/-">Kundli Vichaar 2100/- </option>
-                                            <option value="Vyapaar se Sambandhit">Vyapaar se Sambandhit </option>
-                                            <option value="Dainik Pooja 1500/-">Dainik Pooja 1500/- </option>
-                                            <option value="Nav Graha Pooja ">Nav Graha Pooja </option>
+                                            <option value="Vyapaar se Sambandhit Yagya 41000/-">Vyapaar se Sambandhit Yagya 41000/-</option>
+                                            <option value="Dainik Pooja Yagya 7000/-">Dainik Pooja Yagya 7000/-</option>
+                                            <option value="Nav Grahon ki shakti hetu yagya 31000/-">Nav Grahon ki shakti hetu Yagya 31000/- </option>
                                             <option value="Kasht Nivaran Pooja 50000/-">Kasht Nivaran Pooja 50000/- </option>
-                                            <option value="Pitra Dosh Pooja 21000/-">Pitra Dosh Pooja 21000/-  </option>
-                                            <option value="Kaal Sarp Pooja 31000/-">Kaal Sarp Pooja 31000/- </option>
-                                            <option value="Mangal Dosh Pooja 31000/-">Mangal Dosh Pooja 31000/- </option>
+                                            <option value="Pitra Dosh yagya 21000/-">Pitra Dosh Yagya 21000/-  </option>
+                                            <option value="Kaal Sarp yagya 31000/-">Kaal Sarp Pooja 31000/- </option>
+                                            <option value="Mangal Dosh Pooja Yagya 21000/-">Mangal Dosh Pooja Yagya 21000/- </option>
                                             <option value="Shaanti Pooja Paath 10000/-">Shaanti Pooja Paath 10000/-</option>
                                         </select>
                                     </div>
@@ -479,92 +487,23 @@
             </div>
             </div>
             </div>
-    <h4 style="color: darkred; font-size: 3.5rem; font-weight: bold; font-style: italic; font-family: cursive; text-align: center; justify-content: center; margin-bottom: 40px;">--All Services--</h4>
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/21.jpg'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/91.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/92.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/93.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/94.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/95.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/96.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/97.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/98.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="{% static 'images/99.png'%}" alt="" />
-                    <div class="hov-in">
-                        <a href="/order">Book Now</a>
-                    </div>
-                </div>
-            </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="background-color: rgb(206, 206, 206);">
+            <center>
+            <h4 class="texxt" style="font-size:25px;" ><b>For Payments</b></h4>
+                <h4 class="textt" style="font-size: 20px;">Bank- State Bank of India </h4>
+                <h4 class="textt" style="font-size: 20px;"> Name: Pt. Dinesh Shukla </h4>
+                <h4 class="textt" style="font-size: 20px;"> Account no.- 10298414520</h4>            
+                <h4 class="textt" style="font-size: 20px;"> IFSC- SBIN0001962 </h4>
+                <h4 class="textt" style="font-size: 20px;">  Kanpur (U.P.) </h4>
+                 </center>
+                 </div>  
         </div>
     </div>
-
+    <hr>
 
 
 
@@ -584,49 +523,13 @@
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Business Time</h3>
-							<ul class="list-time">
-								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Newsletter</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="Email Address*" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button class="btn hvr-hover" type="submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            </ul>
-						</div>
-					</div>
-				</div>
+
 				<hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
-                            <p>It's a Online Pooja website in which any body can contact pandit online by this platform.</p> 
+                            <h4>About Vaidikpooja</h4>
+                            <p>It's an Online platform through which users can contact with our pandit's for various customs ,rituals and pooja recitations virtually</p> 
                             </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -646,14 +549,15 @@
                             <h4>Contact Us</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>Address:Panki Mandir, <br>Near Gangaganj Colony, <br>Dakshineshwar Mandir <br> kanpur India </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="0755-4012502">0755-4012502</a></p>
+                                    <p><i class="fas fa-phone-square"></i>Phone: 9935724048</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
+                                    <p><i class="fab fa-whatsapp"></i>Whatsapp: 6394048201</p>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -666,12 +570,52 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vaidikpooja</a> Powered By :
-            <a href="https://html.design/">Bytezip Technologies</a></p>
+            <a href="https://bytezip.in/">Bytezip Technologies</a></p>
     </div>
     <!-- End copyright  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <a href="#" id="back-to-top" title="Back to top" style="display: none; line-height: 35px !important;">&uarr;</a>
+    <script>
 
+    function validate(evt) {
+       var theEvent = evt || window.event;
+     
+       // Handle paste
+       if (theEvent.type === 'paste') {
+           key = event.clipboardData.getData('text/plain');
+       } else {
+       // Handle key press
+           var key = theEvent.keyCode || theEvent.which;
+           key = String.fromCharCode(key);
+       }
+       var regex = /[0-9]|\./;
+       if( !regex.test(key) ) {
+         theEvent.returnValue = false;
+         if(theEvent.preventDefault) theEvent.preventDefault();
+       }
+     }
+
+
+     function charOnly(evt) {
+       var theEvent = evt || window.event;
+     
+       // Handle paste
+       if (theEvent.type === 'paste') {
+           key = event.clipboardData.getData('text/plain');
+       } else {
+       // Handle key press
+           var key = theEvent.keyCode || theEvent.which;
+           key = String.fromCharCode(key);
+       }
+       var regex =/^[A-Za-z\s]+$/;
+       if( !regex.test(key) ) {
+         theEvent.returnValue = false;
+         if(theEvent.preventDefault) theEvent.preventDefault();
+       }
+     }
+
+     
+         </script>
     
      <!-- ALL JS FILES -->
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
@@ -689,6 +633,18 @@
     <script src="{% static 'js/form-validator.min.js' %}"></script>
     <script src="{% static 'js/contact-form-script.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+
+    <script type="text/javascript">
+        function disableBackButton()
+        {
+          window.history.forward();
+        }
+        setTimeout("disableBackButton()", 0);
+         $(document).ready(function () {
+            disableBackButton();
+         });
+     </script>
+    
 </body>
 
 </html>
