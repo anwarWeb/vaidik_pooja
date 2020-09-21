@@ -577,6 +577,16 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none; line-height: 35px !important;">&uarr;</a>
     <script>
 
+
+    window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+    }
+    });
+
+
     function validate(evt) {
        var theEvent = evt || window.event;
      
@@ -614,8 +624,24 @@
        }
      }
 
-     
-         </script>
+     // set current date to date inpute
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+                dd='0'+dd
+            } 
+            if(mm<10){
+                mm='0'+mm
+            } 
+
+        today = yyyy+'-'+mm+'-'+dd;
+        document.getElementById("date").setAttribute("min", today);
+
+
+       
+    </script>
     
      <!-- ALL JS FILES -->
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
@@ -634,17 +660,7 @@
     <script src="{% static 'js/contact-form-script.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
 
-    <script type="text/javascript">
-        function disableBackButton()
-        {
-          window.history.forward();
-        }
-        setTimeout("disableBackButton()", 0);
-         $(document).ready(function () {
-            disableBackButton();
-         });
-     </script>
-    
+
 </body>
 
 </html>

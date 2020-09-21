@@ -54,24 +54,28 @@ def orederform(request):
     if request.method=="POST":
         pooja_date = request.POST.get('date', '')
         pooja_date = datetime.strptime(pooja_date , '%Y-%m-%d')
-        if datetime.now() > pooja_date:
-            return render(request,'vidik/book.html',{'error':'Date not valid!'})
-        name = request.POST.get('name', '')
-        email = request.POST.get('email', '')
-        countryCode=request.POST.get('countryCode', '')
-        phone = request.POST.get('phone', '')
-        address = request.POST.get('address', '')
-        pooja_date = request.POST.get('date', '')
-        select_pooja = request.POST.get('select_pooja', '')
 
-        if "." not in email:
-            return render(request,'vidik/book.html',{'error':'Email is not valid!'})
-            
-        if(countryCode == '+91' and len(phone) !=10):
-            return render(request,'vidik/book.html',{'error':'Phone number is not valid!'})
-        book = Book(name=name, email=email,countryCode=countryCode, phone=phone, address=address, pooja_date=pooja_date, select_pooja=select_pooja)
-        book.save()
-        return render(request,'vidik/book.html',{'message':'Booking is successful!'})
+        if(datetime.now().day <= pooja_date.day) and datetime.now().month <= pooja_date.month and datetime.now().year <= pooja_date.year:
+            name = request.POST.get('name', '')
+            email = request.POST.get('email', '')
+            countryCode=request.POST.get('countryCode', '')
+            phone = request.POST.get('phone', '')
+            address = request.POST.get('address', '')
+            pooja_date = request.POST.get('date', '')
+            select_pooja = request.POST.get('select_pooja', '')
+
+            if "." not in email:
+                return render(request,'vidik/book.html',{'error':'Email is not valid!'})
+                
+            if(countryCode == '+91' and len(phone) !=10):
+                return render(request,'vidik/book.html',{'error':'Phone number is not valid!'})
+            # book = Book(name=name, email=email,countryCode=countryCode, phone=phone, address=address, pooja_date=pooja_date, select_pooja=select_pooja)
+            # book.save()
+            return render(request,'vidik/book.html',{'message':'Booking is successful!'})
+
+        else:
+            return render(request,'vidik/book.html',{'error':'Date not valid!'})  
+       
     return render(request,"vidik/book.html")
 
 def orderSave(request):
